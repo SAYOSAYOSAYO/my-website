@@ -2,10 +2,122 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>はじめての無料サイト</title>
+  <title>CUTIE STREET風 サイト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #fff;
+      color: #222;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 20px 0 10px 0;
+      text-align: center;
+    }
+    .logo {
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      color: #ff69b4;
+      margin-bottom: 5px;
+    }
+    nav {
+      margin: 10px 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ff69b4;
+    }
+    .main-visual {
+      background: url('https://cutiestreet.asobisystem.com/assets/images/mainvisual.jpg') center/cover no-repeat;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .main-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,105,180,0.25);
+      z-index: 1;
+    }
+    .main-visual-content {
+      position: relative;
+      z-index: 2;
+    }
+    .main-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      letter-spacing: 0.1em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .main-btn {
+      display: inline-block;
+      background: #ff69b4;
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 12px 36px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s;
+    }
+    .main-btn:hover {
+      background: #e055a1;
+    }
+    @media (max-width: 600px) {
+      .main-title { font-size: 1.5rem; }
+      .main-visual { min-height: 180px; }
+      nav a { margin: 0 8px; font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
-  <h1>ようこそdesu！</h1>
-  <p>これはGitHub Pagesで公開する無料のWebサイトです。</p>
+  <!-- ヘッダー・ロゴ -->
+  <header>
+    <div class="logo">CUTIE STREET</div>
+    <!-- メニューリンク -->
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#news">NEWS</a>
+      <a href="#entry">ENTRY</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- メインビジュアル -->
+  <section class="main-visual">
+    <div class="main-visual-content">
+      <div class="main-title">カワイイが集まるストリートイベント</div>
+      <!-- エントリーボタン -->
+      <a href="#entry" class="main-btn">エントリーはこちら</a>
+    </div>
+  </section>
+
+  <!-- ここから下に各セクションを追加できます -->
+  <!-- 例：ABOUT、NEWS、ENTRY、CONTACTなど -->
+  <!-- 
+    <section id="about"> ... </section>
+    <section id="news"> ... </section>
+    <section id="entry"> ... </section>
+    <section id="contact"> ... </section>
+  -->
 </body>
 </html>
